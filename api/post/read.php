@@ -30,6 +30,7 @@
             'id'=>$id,
             'baslik'=>$baslik,
             'icerik'=>html_entity_decode($icerik),
+            'image'=>$image,
             'yayinci'=>$yayinci,
             'yayin_tarihi'=>$yayin_tarihi
         );

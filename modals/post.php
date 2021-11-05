@@ -6,6 +6,7 @@ class post{
     public $id;
     public $baslik;
     public $icerik;
+    public $image;
     public $yayinci;
     public $yayin_tarihi;
 
@@ -17,7 +18,7 @@ class post{
 
     public function read(){
 
-        $query='SELECT id,baslik,icerik,yayinci,yayin_tarihi FROM '.$this->table.' ORDER BY yayin_tarihi DESC';
+        $query='SELECT id,baslik,icerik,image,yayinci,yayin_tarihi FROM '.$this->table.' ORDER BY yayin_tarihi DESC';
 
         //statement
 
