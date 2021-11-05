@@ -38,12 +38,7 @@ class post{
 
        //statement hazırla
 
-       $stmt=$this->conn->prepare($query);
-
-       //datayı temizle
-        $this->baslik=htmlspecialchars(strip_tags($this->baslik));
-        $this->icerik=htmlspecialchars(strip_tags($this->icerik));
-        $this->yayinci=htmlspecialchars(strip_tags($this->yayinci));
+       $stmt=$this->conn->prepare($query);       
 
         //data binding
 
