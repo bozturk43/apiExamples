@@ -1,6 +1,6 @@
 <?php
- header('Acces-Control-Allow-Origin * ');
- header('Content-Type:application/json');
+ header('Access-Control-Allow-Origin: *');
+ header('Content-Type: application/json');
 
  include_once '../../config/database.php';
  include_once '../../modals/post.php';
@@ -20,7 +20,6 @@
  if($num > 0){
 
     $post_arr=array();
-    $post_arr['data']=array();
 
     while($row=$result->fetch(PDO::FETCH_ASSOC)){
 
@@ -35,7 +34,7 @@
             'yayin_tarihi'=>$yayin_tarihi
         );
 
-        array_push($post_arr['data'],$post_item);
+        array_push($post_arr,$post_item);
 
     }
 
