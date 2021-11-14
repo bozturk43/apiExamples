@@ -19,7 +19,7 @@ class post{
     //read posts
     public function read(){
 
-        $query='SELECT id,baslik,icerik,image,yayinci,yayin_tarihi FROM '.$this->table.' ORDER BY yayin_tarihi DESC';
+        $query='SELECT id,baslik,icerik,resim,yayinci,yayin_tarihi FROM '.$this->table.' ORDER BY yayin_tarihi DESC';
 
         //statement
 
@@ -34,7 +34,9 @@ class post{
    //create posts
    
    public function create(){
-       $query='INSERT INTO services SET baslik= :baslik, icerik= :icerik, yayinci= :yayinci';
+
+
+       $query='INSERT INTO services SET baslik= :baslik, icerik= :icerik, yayinci= :yayinci,resim= :resim';
 
        //statement hazırla
 
@@ -45,6 +47,9 @@ class post{
         $stmt->bindParam(':baslik',$this->baslik);
         $stmt->bindParam(':icerik',$this->icerik);
         $stmt->bindParam(':yayinci',$this->yayinci);
+        $stmt->bindParam(':resim',$this->resim);
+     
+       
 
         //query çalıştır
 
